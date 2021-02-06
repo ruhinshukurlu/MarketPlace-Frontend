@@ -1,0 +1,479 @@
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/user-profile.css">
+    <link rel="stylesheet" href="css/company-profile.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/reserve-page.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Add New Skill</title>
+</head>
+
+<body id="profile-body">
+
+
+   
+<style>
+    header .side{
+        margin: 5px 0;
+    }
+</style>
+<header > 
+    <div class="custom-container container custom-container-mobile shadow">
+        <div class="row justify-content-between">
+            <div class="left side">
+                <a href="home-page.html">
+                    <img src="images/easy-logo.png" width="200px" height="60px" style="object-fit: cover;" alt="">
+                </a>
+            </div>
+            <div class="right side">
+
+                
+                <div class="user-profile">
+                    <button type="button" class="header-btn">
+                        <i class="far fa-user"></i>
+                    </button>
+                    <div class="custom-drop-down shadow box1" style="display: none;">
+                        <div class="triangle"></div>
+                        <span>Hello, Ruhin</span>
+                        <ul>
+                            <li>
+                                <a href="add-skill.html">
+                                    <i class="far fa-plus-square mr-2"></i>
+                                    Add Skill
+                                </a>
+                            </li>
+                            <li>
+                                <a href="worker-detail.html">
+                                    <i class="far fa-user-circle mr-2"></i>
+                                    Work Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="task-list.html">
+                                    <i class="fas fa-tasks mr-2"></i>
+                                    Your Tasks
+                                </a>
+                            </li>
+                            <li>
+                                <a href="user-profile.html">
+                                    <i class="far fa-user-circle mr-2"></i>
+                                    My Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" style="color: red;">
+                                    <i class="fas fa-sign-out-alt mr-2" style="color: red;"></i>
+                                    Sign out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="reserve-table">
+                    <button type="button" class="header-btn"><i class="far fa-calendar"></i></button>
+                    <div class="custom-drop-down p-3 box2 scroll-y" style="display: none;">
+                        <div class="triangle"></div>
+                        <span class="pb-2">Upcoming Services</span>
+                        <p class="pl-2 pr-2">You have no upcoming Services</p>
+                    </div>
+                </div>
+                <div class="notification">
+                    <button type="button" class="header-btn notification-btn">
+                        <i class="far fa-bell"></i>
+                    </button>
+                    <div class="custom-drop-down box3 scroll-y p-3" style="display: none;">
+                        <div class="triangle"></div>
+                        <span>Notifications</span>
+                        <img src="images/animat-bell-color.gif" width="50%" class="m-auto" alt="">
+                        <p class="pl-2 pr-2 bold text-center">Nothing to see here, you’re all caught up!</p>
+                    </div>
+                </div>
+                <button type="button" class="btn register-btn mr-2" data-toggle="modal"
+                    data-target="#exampleModal">Sign Up</button>
+                <a href="login.html" class="btn login-btn bold">Sign In</a>
+
+
+            </div>
+        </div>
+        
+    </div>
+</header>
+
+<section>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body d-column">
+                    <a href="register-user.html" class="btn register-btn mb-2">Sign Up as User</a>
+                    <a href="worker-register.html" class="btn register-btn">Sign Up as Worker</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+
+
+    <style>
+        .form-control:focus {
+            border: 1px solid rgb(116, 184, 248);
+        }
+
+        .form-group ul {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
+    <!-- <main class="mb-5"> -->
+    <div class="container main-register-container pb-5 shadow">
+        <div class="row">
+
+            <div class="col-lg-8 mx-auto pt-5">
+                <h3 class="full bold bottom-border pb-3 padding-mobile">Add New Skill</h3>
+
+                <form method="post" enctype="multipart/form-data" id="addTourForm">
+                
+                    <div class="d-column">
+
+                        <div class="form-group">
+                            <label for="id_price">Price:</label>
+                            <input type="text" name="price" class="form-control" placeholder="Price per Hour.."
+                                required="" id="id_price">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_experience">Experience:</label>
+                            <textarea name="experience" cols="40" rows="5" class="form-control" required=""
+                                id="id_experience"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_service">Service:</label>
+                            <select name="service" class="form-control" required="" id="id_service">
+                                <option value="" selected="">---------</option>
+
+                                <option value="2">Furniture Movement</option>
+
+                                <option value="1">Cleaning</option>
+
+                                <option value="4">Car Washing</option>
+
+                                <option value="5">Home Service</option>
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Vehicles:</label>
+                            <ul id="id_vehicles">
+                                <li><label for="id_vehicles_0"><input type="checkbox" name="vehicles" value="1"
+                                            id="id_vehicles_0">
+                                        Car</label>
+
+                                </li>
+                                <li><label for="id_vehicles_1"><input type="checkbox" name="vehicles" value="2"
+                                            id="id_vehicles_1">
+                                        Truck</label>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tools:</label>
+                            <ul id="id_tools">
+                                <li><label for="id_tools_0"><input type="checkbox" name="tools" value="1"
+                                            id="id_tools_0">
+                                        Power drill</label>
+
+                                </li>
+                                <li><label for="id_tools_1"><input type="checkbox" name="tools" value="2"
+                                            id="id_tools_1">
+                                        Power saw</label>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-8" id="photosBox">
+
+                            <div class="form-group photo-item mb-2">
+
+                                <label for="id_form-0-image">Select Photo:</label><input type="file" name="form-0-image"
+                                    class="photo-input" id="id_form-0-image"><input type="hidden" name="form-0-id"
+                                    id="id_form-0-id">
+                            </div>
+
+                            <div class="form-group photo-item mb-2" style="display: none;">
+
+                                <label for="id_form-1-image">Select Photo:</label><input type="file" name="form-1-image"
+                                    class="photo-input" id="id_form-1-image"><input type="hidden" name="form-1-id"
+                                    id="id_form-1-id">
+                            </div>
+
+                            <div class="form-group photo-item mb-2" style="display: none;">
+
+                                <label for="id_form-2-image">Select Photo:</label><input type="file" name="form-2-image"
+                                    class="photo-input" id="id_form-2-image"><input type="hidden" name="form-2-id"
+                                    id="id_form-2-id">
+                            </div>
+
+                            <div class="form-group photo-item mb-2" style="display: none;">
+
+                                <label for="id_form-3-image">Select Photo:</label><input type="file" name="form-3-image"
+                                    class="photo-input" id="id_form-3-image"><input type="hidden" name="form-3-id"
+                                    id="id_form-3-id">
+                            </div>
+
+                            <div class="form-group photo-item mb-2" style="display: none;">
+
+                                <label for="id_form-4-image">Select Photo:</label><input type="file" name="form-4-image"
+                                    class="photo-input" id="id_form-4-image"><input type="hidden" name="form-4-id"
+                                    id="id_form-4-id">
+                            </div>
+
+                            <div class="form-group photo-item mb-2" style="display: none;">
+
+                                <label for="id_form-5-image">Select Photo:</label><input type="file" name="form-5-image"
+                                    class="photo-input" id="id_form-5-image"><input type="hidden" name="form-5-id"
+                                    id="id_form-5-id">
+                            </div>
+
+                            <div class="form-group photo-item mb-2" style="display: none;">
+
+                                <label for="id_form-6-image">Select Photo:</label><input type="file" name="form-6-image"
+                                    class="photo-input" id="id_form-6-image"><input type="hidden" name="form-6-id"
+                                    id="id_form-6-id">
+                            </div>
+
+                            <div class="form-group photo-item mb-2" style="display: none;">
+
+                                <label for="id_form-7-image">Select Photo:</label><input type="file" name="form-7-image"
+                                    class="photo-input" id="id_form-7-image"><input type="hidden" name="form-7-id"
+                                    id="id_form-7-id">
+                            </div>
+
+                            <div class="form-group photo-item mb-2" style="display: none;">
+
+                                <label for="id_form-8-image">Select Photo:</label><input type="file" name="form-8-image"
+                                    class="photo-input" id="id_form-8-image"><input type="hidden" name="form-8-id"
+                                    id="id_form-8-id">
+                            </div>
+
+                            <div class="form-group photo-item mb-2" style="display: none;">
+
+                                <label for="id_form-9-image">Select Photo:</label><input type="file" name="form-9-image"
+                                    class="photo-input" id="id_form-9-image"><input type="hidden" name="form-9-id"
+                                    id="id_form-9-id">
+                            </div>
+
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-outline-primary" type="button" onclick="addPhoto()">
+                                <i class="fas fa-plus-circle mr-2"></i>
+                                Add Another Photo</button>
+                        </div>
+                    </div>
+
+
+                    <input type="submit" value="Add Skill" class="btn btn-outline-success pr-3 pl-3 full">
+                </form>
+
+              
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- </main> -->
+
+    <footer class="page-footer font-small mdb-color pt-4">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+    
+        <!-- Footer links -->
+        <div class="row text-center text-md-left mt-3 pb-3">
+    
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Company Name</h6>
+            <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                consectetur
+                adipisicing elit.</p>
+            </div>
+            <!-- Grid column -->
+    
+            <hr class="w-100 clearfix d-md-none">
+    
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <p>
+                <a href="#!">MDBootstrap</a>
+            </p>
+            <p>
+                <a href="#!">MDWordPress</a>
+            </p>
+            <p>
+                <a href="#!">BrandFlow</a>
+            </p>
+            <p>
+                <a href="#!">Bootstrap Angular</a>
+            </p>
+            </div>
+            <!-- Grid column -->
+    
+            <hr class="w-100 clearfix d-md-none">
+    
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+            <p>
+                <a href="#!">Your Account</a>
+            </p>
+            <p>
+                <a href="#!">Become an Affiliate</a>
+            </p>
+            <p>
+                <a href="#!">Shipping Rates</a>
+            </p>
+            <p>
+                <a href="#!">Help</a>
+            </p>
+            </div>
+    
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none">
+    
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p>
+                <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+            <p>
+                <i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+            <p>
+                <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p>
+                <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+    
+        </div>
+        <!-- Footer links -->
+    
+        <hr>
+    
+        <!-- Grid row -->
+        <div class="row d-flex align-items-center">
+    
+            <!-- Grid column -->
+            <div class="col-md-7 col-lg-8">
+    
+            <!--Copyright-->
+            <p class="text-center text-md-left">© 2020 Copyright:
+                <a href="https://mdbootstrap.com/">
+                <strong> MDBootstrap.com</strong>
+                </a>
+            </p>
+    
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+    
+            <!-- Social buttons -->
+            <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-google-plus-g"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                </ul>
+            </div>
+    
+            </div>
+            <!-- Grid column -->
+    
+        </div>
+        <!-- Grid row -->
+    
+        </div>
+        <!-- Footer Links -->
+    
+    </footer>
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <script>
+        var photo_box = $('#photosBox').children('.photo-item')
+        var photo_count = 1
+        // console.log(photo_box);
+
+        for (let i = 1; i < photo_box.length; i++) {
+            $(photo_box[i]).css('display', 'none')
+        }
+
+        function addPhoto() {
+            $(photo_box[photo_count]).css('display', 'block')
+            photo_count++
+        }
+    </script>
+
+
+</body>
+
+</html>
