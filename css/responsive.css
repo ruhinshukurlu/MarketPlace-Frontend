@@ -66,14 +66,14 @@
     .company-profile-img img{
         max-height: 240px;
     }
-    .cover-name {
+    /* .cover-name {
         font-size: 43px !important;
-    }
-    .overlay-text{
+    } */
+    /* .overlay-text{
         font-size: 18px !important;
-    }
+    } */
     .overlay-text span {
-        font-size: 18px;
+        font-size: 38px;
     }
 }
 
