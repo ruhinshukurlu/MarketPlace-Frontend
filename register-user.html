@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/reserve-page.css">
     <link rel="stylesheet" href="css/custom.css">
+ 
     <title>User Register</title>
 </head>
 <body id="profile-body">
@@ -137,7 +138,7 @@
     <!-- <main class="mb-5"> -->
         <div class="container main-register-container pb-5 shadow">
             <div class="row">
-                <div class="col-lg-5 mx-auto pt-5">
+                <div class="col-md-6 mx-auto pt-5">
                     <form method="POST">
                         <div class="form-group">
                             <input type="text" name="first_name" class="form-control height" placeholder="First Name" required="" id="id_first_name">
@@ -159,6 +160,28 @@
                             <input type="password" name="password2" class="form-control height" placeholder="Re-enter Password" required="" id="id_password2">
                             
                         </div> 
+                        <div class="form-group">
+                            <input type="date" name="data" class="form-control height" required="" id="id_data">
+                            
+                        </div> 
+                        <div class="form-group">
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </div>
+                    <div class="form-group">
+                    
+                 <select name="selectarea" id="select_area" >
+                     <option value="text">Select your area</option>
+                     <option value="text">Baku</option>
+                     <option value="text">Sumgayit</option>
+                 </select>
+                 <input type="text" placeholder="Add your address">
+                    </div>
+                    <div class="form-group">
+                        <label for="review">Which types of services would you like to see more?</label>
+                    <textarea id="review" name="review" rows="4" cols="50" style="border:1px solid rgba(0, 0, 0, 0.164);">
+                       </textarea>
+                    </div>
                         <div class="form-group" style="text-align: center;">
                             <input type="submit" value="Create Account" class="btn btn-danger px-3 register-user-btn">
                         </div> 
@@ -167,7 +190,7 @@
                 
             </div>
             <div class="row">
-                <div class="col-lg-5 mx-auto pt-5">
+                <div class="col-md-6 mx-auto pt-5">
                     <form>
                         <div class="form-group">
                             <a class="btn btn-block btn-social btn-google py-3" style="border: 1px solid #ccc;">
@@ -325,7 +348,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
     
 </body>
